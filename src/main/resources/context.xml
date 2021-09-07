@@ -15,18 +15,10 @@
     </bean>
 
     <bean id="config" class="com.zaxxer.hikari.HikariConfig">
-        <property name="username" value="postgres"/>
-        <property name="password" value="qwerty"/>
-        <property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/postgres"/>
-        <property name="driverClassName" value="org.postgresql.Driver"/>
-        <property name="maximumPoolSize" value="20"/>
-    </bean>
-
-    <bean id="properties" class="java.util.Properties">
-
-    </bean>
-
-    <bean id="fileReader" class="java.io.FileReader">
-        <constructor-arg name="fileName" value="C:\Users\Master3\IdeaProjects\05. Homework\src\main\resources\application.properties"/>
+        <property name="username" value="${db.user}"/>
+        <property name="password" value="${db.password}"/>
+        <property name="jdbcUrl" value="${db.url}"/>
+        <property name="driverClassName" value="${db.driver}"/>
+        <property name="maximumPoolSize" value="${db.hikari.pool-size}"/>
     </bean>
 </beans>
