@@ -3,6 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <context:property-placeholder location="application.properties"/>
+       
     <bean id="signUpService" class="ru.itis.SignUpService">
         <constructor-arg name="passwordRepository" ref="passwordRepositoryJdbcTemplateImpl"/>
     </bean>
